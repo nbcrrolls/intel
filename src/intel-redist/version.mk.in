@@ -1,0 +1,26 @@
+NAME          = intel-redist
+VERSION       = $(INTEL_YEAR).$(INTEL_MAJOR).$(INTEL_MINOR)
+RELEASE       = 0
+PKGROOT       = /opt/intel
+
+SRC_SUBDIR    = intel-compilers
+
+CCOMP_NAME    = l_ccompxe
+CCOMP_SUFFIX  = tgz
+CCOMP_VERSION = $(VERSION)
+CCOMP_PKG     = $(CCOMP_NAME)_$(CCOMP_VERSION)_redist.$(CCOMP_SUFFIX)
+CCOMP_DIR     = $(CCOMP_PKG:%.$(CCOMP_SUFFIX)=%)
+
+FCOMP_NAME    = l_fcompxe
+FCOMP_SUFFIX  = tgz
+FCOMP_VERSION = $(VERSION)
+FCOMP_PKG     = $(FCOMP_NAME)_$(FCOMP_VERSION)_redist.$(FCOMP_SUFFIX)
+FCOMP_DIR     = $(FCOMP_PKG:%.$(FCOMP_SUFFIX)=%)
+
+TGZ_PKGS      = $(CCOMP_PKG) $(FCOMP_PKG)
+
+# prevent binary/library stripping
+RPM.EXTRAS  = %define __os_install_post /usr/lib/rpm/brp-compress \\n%define __strip /bin/false
+
+# disable requires
+RPM.EXTRAS    += "\\nAutoReq: no"

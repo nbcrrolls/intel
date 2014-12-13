@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="no"?>
+
+<kickstart>
+
+	<description>
+	Intel C and Fortran compilers
+	</description>
+
+	<copyright>
+	Copyright (c) 2000 - 2014 The Regents of the University of California.
+	All rights reserved. Rocks(r) 6.2 www.rocksclusters.org
+	</copyright>
+
+	<changelog>
+	</changelog>
+
+	<package>intel-redist</package>
+	<package>intel-modules</package>
+	<package>mkl-modules</package>
+
+<post>
+</post>
+
+</kickstart>
+

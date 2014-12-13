@@ -1,0 +1,109 @@
+<?xml version="1.0" standalone="no"?>
+
+<kickstart>
+
+	<description>
+	Intel C and Fortran compilers on login node
+	</description>
+
+	<copyright>
+	Copyright (c) 2000 - 2014 The Regents of the University of California.
+	All rights reserved. Rocks(r) 6.2 www.rocksclusters.org
+	</copyright>
+
+	<changelog>
+	</changelog>
+
+	<!-- Intel Roll module/test RPM's -->
+	<package>intel-modules</package>
+	<package>mkl-modules</package>
+	<package>intel-roll-test</package>
+	<package>mkl-roll-test</package>
+
+	<!-- Intel(R) Parallel Studio XE Composer Edition for Linux* -->
+	<package>intel-gdb-INTEL_MINOR</package>
+	<package>intel-gdb-cdt-INTEL_MINOR</package>
+	<package>intel-gdb-cdt-source-INTEL_MINOR</package>
+	<package>intel-gdb-common-INTEL_MINOR</package>
+	<package>intel-gdb-mic-INTEL_MINOR</package>
+	<package>intel-gdb-mpm-INTEL_MINOR</package>
+	<package>intel-gdb-python-source-INTEL_MINOR</package>
+	<package>intel-gdb-source-INTEL_MINOR</package>
+	<package>intel-gdb-toplevel-INTEL_MINOR</package>
+	<package>intel-openmp-INTEL_MINOR</package>
+	<package>intel-openmp-devel-INTEL_MINOR</package>
+	<package>intel-sourcechecker-common-INTEL_MINOR</package>
+	<package>intel-sourcechecker-devel-INTEL_MINOR</package>
+
+	<!-- Intel(R) C++ Compiler XE 15.0 for Linux* -->
+	<package>intel-ccompxe-INTEL_MINOR</package>
+	<package>intel-compilerproc-INTEL_MINOR</package>
+	<package>intel-compilerproc-common-INTEL_MINOR</package>
+	<package>intel-compilerproc-devel-INTEL_MINOR</package>
+	<package>intel-compilerpro-common-INTEL_MINOR</package>
+	<package>intel-compilerpro-common-pset-INTEL_MINOR</package>
+	<package>intel-compilerproc-vars-INTEL_MINOR</package>
+	<package>intel-compilerpro-devel-INTEL_MINOR</package>
+	<package>intel-compilerprof-INTEL_MINOR</package>
+	<package>intel-compilerprof-common-INTEL_MINOR</package>
+	<package>intel-compilerprof-devel-INTEL_MINOR</package>
+	<package>intel-compilerprof-vars-INTEL_MINOR</package>
+	<package>intel-compilerpro-vars-INTEL_MINOR</package>
+
+	<!--  empty package
+	<package>intel-compilers</package>
+	-->
+
+	<!-- Intel(R) Fortran Compiler XE 15.0 for Linux* -->
+	<package>intel-fcompxe-INTEL_MINOR</package>
+
+	<!-- Intel(R) Integrated Performance Primitives 8.2 for Linux* -->
+	<package>intel-ipp-ac-INTEL_MINOR</package>
+	<package>intel-ipp-ac-common-INTEL_MINOR</package>
+	<package>intel-ipp-common-INTEL_MINOR</package>
+	<package>intel-ipp-di-INTEL_MINOR</package>
+	<package>intel-ipp-di-common-INTEL_MINOR</package>
+	<package>intel-ipp-gen-INTEL_MINOR</package>
+	<package>intel-ipp-gen-common-INTEL_MINOR</package>
+	<package>intel-ipp-jp-INTEL_MINOR</package>
+	<package>intel-ipp-jp-common-INTEL_MINOR</package>
+	<package>intel-ipp-mt-INTEL_MINOR</package>
+	<package>intel-ipp-mt-devel-INTEL_MINOR</package>
+	<package>intel-ipp-mx-INTEL_MINOR</package>
+	<package>intel-ipp-mx-common-INTEL_MINOR</package>
+	<package>intel-ipp-rr-INTEL_MINOR</package>
+	<package>intel-ipp-rr-common-INTEL_MINOR</package>
+	<package>intel-ipp-sc-INTEL_MINOR</package>
+	<package>intel-ipp-sc-common-INTEL_MINOR</package>
+	<package>intel-ipp-st-INTEL_MINOR</package>
+	<package>intel-ipp-st-devel-INTEL_MINOR</package>
+	<package>intel-ipp-st-devel-common-INTEL_MINOR</package>
+	<package>intel-ipp-vc-INTEL_MINOR</package>
+	<package>intel-ipp-vc-common-INTEL_MINOR</package>
+
+	<!-- Intel(R) Math Kernel Library 11.2 for Linux* -->
+	<package>intel-mkl-INTEL_MINOR</package>
+	<package>intel-mkl-cluster-INTEL_MINOR</package>
+	<package>intel-mkl-cluster-common-INTEL_MINOR</package>
+	<package>intel-mkl-cluster-devel-INTEL_MINOR</package>
+	<package>intel-mkl-common-INTEL_MINOR</package>
+	<package>intel-mkl-devel-INTEL_MINOR</package>
+	<package>intel-mkl-f95-common-INTEL_MINOR</package>
+	<package>intel-mkl-f95-devel-INTEL_MINOR</package>
+	<package>intel-mkl-gnu-INTEL_MINOR</package>
+	<package>intel-mkl-gnu-devel-INTEL_MINOR</package>
+	<package>intel-mkl-mic-INTEL_MINOR</package>
+	<package>intel-mkl-mic-devel-INTEL_MINOR</package>
+	<package>intel-mkl-pgi-INTEL_MINOR</package>
+	<package>intel-mkl-pgi-devel-INTEL_MINOR</package>
+	<package>intel-mkl-sp2dp-INTEL_MINOR</package>
+	<package>intel-mkl-sp2dp-devel-INTEL_MINOR</package>
+
+	<!-- Intel(R) Threading Building Blocks 4.3 for Linux* -->
+	<package>intel-tbb-INTEL_MINOR</package>
+	<package>intel-tbb-devel-INTEL_MINOR</package>
+
+<post>
+</post>
+
+</kickstart>
