@@ -1,0 +1,24 @@
+# build directory
+RPMS/x86_64
+RPMS/noarch
+SOURCES/
+BUILD/
+SPECS/
+disk1/
+*.iso
+
+_os
+_arch
+_distribution
+.rpmmacros
+
+# ignore version, rules  files
+Rules-*.mk
+Rules.mk
+Rolls.mk
+roll*.mk
+rocks-*.mk
+
+# ignore src files
+src/*/*.tar.gz
+src/*/*.tgz
