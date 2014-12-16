@@ -177,19 +177,19 @@ SKIP: {
 
   if($compilersInstalled) {
 
-    $output = `module load compilers/intel; icc -o $TESTFILE.c.exe $TESTFILE.c 2>&1`;
+    $output = `module load intel; icc -o $TESTFILE.c.exe $TESTFILE.c 2>&1`;
     ok($? == 0, 'intel C compiler works');
-    $output = `module load compilers/intel; ./$TESTFILE.c.exe`;
+    $output = `module load intel; ./$TESTFILE.c.exe`;
     ok($? == 0, 'compiled C program runs');
     like($output, qr/Hello world/, 'compile C program correct output');
 
-    $output = `module load compilers/intel; ifort -o $TESTFILE.f.exe $TESTFILE.f 2>&1`;
+    $output = `module load intel; ifort -o $TESTFILE.f.exe $TESTFILE.f 2>&1`;
     ok($? == 0, 'intel FORTRAN compiler works');
-    $output = `module load compilers/intel; ./$TESTFILE.f.exe`;
+    $output = `module load intel; ./$TESTFILE.f.exe`;
     ok($? == 0, 'compiled FORTRAN program runs');
     like($output, qr/Hello world/, 'compile FORTRAN program correct output');
 
-    $output = `module load compilers/intel; man icc 2>&1`;
+    $output = `module load intel; man icc 2>&1`;
     ok($output =~ /Intel/, 'man works for intel');
   
     `/bin/ls /opt/modulefiles/compilers/intel/[0-9.]* 2>&1`;
@@ -201,9 +201,9 @@ SKIP: {
 
   }
 
-  $output = `module load applications/mkl; gcc -o $TESTFILE.mkl.exe $TESTFILE.mkl.c -I\${MKL_ROOT}/include -L\${MKL_ROOT}/intel64/lib -lmkl_gf_lp64 -lmkl_core -lmkl_gnu_thread -lpthread -lm -lgomp 2>&1`;
+  $output = `module load mkl; gcc -o $TESTFILE.mkl.exe $TESTFILE.mkl.c -I\${MKL_ROOT}/include -L\${MKL_ROOT}/intel64/lib -lmkl_gf_lp64 -lmkl_core -lmkl_gnu_thread -lpthread -lm -lgomp 2>&1`;
   ok($? == 0, 'mkl compiles w/gnu C');
-  $output = `module load applications/mkl; ./$TESTFILE.mkl.exe 5`;
+  $output = `module load mkl; ./$TESTFILE.mkl.exe 5`;
   ok($? == 0, 'mkl runs w/gnu C');
   like($output, qr/115\s+150\s+185\s+220\s+255/, 'mkl correct output w/gu C');
 
