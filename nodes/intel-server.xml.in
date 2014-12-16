@@ -18,7 +18,6 @@
 	<package>intel-modules</package>
 	<package>mkl-modules</package>
 	<package>intel-roll-test</package>
-	<package>mkl-roll-test</package>
 	<package>rocks-intel</package>
 
 	<!-- Intel(R) Parallel Studio XE Composer Edition for Linux* -->
