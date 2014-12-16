@@ -57,7 +57,7 @@
 -include $(ROLLSROOT)/etc/Rolls.mk
 
 version.mk:
-	grep "INTEL_MINOR[ ]*=" src/intel-compilers/version.mk > version.mk
+	grep "INTEL_MINOR =" src/version.mk > version.mk
 	cat version.mk.in >> version.mk
 
 
@@ -72,6 +72,7 @@ default:	roll
 
 clean::
 	rm -f _arch bootstrap.py
+	rm -rf version.mk
 
 cvsclean:: clean
 	for i in `ls nodes/*.in`; do \
