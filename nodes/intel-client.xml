@@ -17,8 +17,12 @@
 	<package>intel-redist</package>
 	<package>intel-modules</package>
 	<package>mkl-modules</package>
+	<package>rocks-intel</package>
 
 <post>
+if [ -x /opt/intel/rocks/bin/addModPath ] ; then
+   /opt/intel/rocks//bin/addModPath
+fi 
 </post>
 
 </kickstart>

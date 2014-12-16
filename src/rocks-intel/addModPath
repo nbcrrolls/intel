@@ -1,0 +1,12 @@
+#!/bin/bash
+
+MODULESHOME=${MODULESHOME:=/usr/share/Modules}
+modpathfile=$MODULESHOME/init/.modulespath
+
+optpath="/opt/modulefiles"
+present=`grep "$optpath" $modpathfile`
+if [ "$present" == "" ] ; then
+	echo "# Adding applications modules in $optpath" >> $modpathfile
+	echo "$optpath" >> $modpathfile
+fi
+
