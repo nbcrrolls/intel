@@ -41,14 +41,24 @@ A successful build will create the file ``intel-*.disk*.iso``.
 Installing
 ------------
 
-To install, execute these instructions on a Rocks frontend: ::
+The roll installs on logn and compte nmodes when they are kickstarted during the cluster build.
+On compute nodes only redist packages (libs) are installed.  The compilers will be available on login node.
+To add  this roll to existing cluster, execute these instructions on a Rocks frontend node: ::
 
     # rocks add roll *.iso
     # rocks enable roll intel
     # cd /export/rocks/install
     # rocks create distro
     # rocks run roll intel > add-roll.sh
+
+And on login node execute resulting add-roll.sh: ::
+
     # bash add-roll.sh 2>&1 | tee  add-roll.out
+
+Reinstall compute nodes:  ::
+    
+    # rocks set host boot compute action=install
+    # rocks run host compute reboot
 
 In addition to the software itself, the roll installs intel environment
 module files in: ::
@@ -56,6 +66,10 @@ module files in: ::
     /opt/modulefiles/compilers/intel
     /opt/modulefiles/applications/mkl
 
+If a clsuter has no login node, to intall compilers on the frontend execute the following 
+command before running ``rocks add roll``: ::
+    
+    # /opt/rocks/bin/rocks add host attr localhost intelxe true
 
 Testing
 ----------

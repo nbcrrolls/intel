@@ -16,6 +16,9 @@
 	<changelog>
 	</changelog>
 
+	<edge from="server" cond intelxe="true">
+		 <to>intel-server</to>
+	<edge/>
 	<edge from="login" to="intel-server"/>
 	<edge from="compute" to="intel-client"/>
 
