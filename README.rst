@@ -25,6 +25,9 @@ target="_blank">Intel Composer XE Suites</a>
 Requirements
 -------------
 
+Install sdsc-roll (from SDSC/sdsc-roll repo). This roll provides needed DEVEL environment and
+adjusts MODULEPATH needed to run applications (sdsc-etc-profile rpm).
+
 To build/install this roll you must download intel compielrs soruce files (tgz)
 in src/intel-compiler and src/intel-redist/. The files names match patterns
 in ``*.version.mk.in`` files.

@@ -18,7 +18,6 @@
 	<package>intel-modules</package>
 	<package>mkl-modules</package>
 	<package>intel-roll-test</package>
-	<package>rocks-intel</package>
 
 	<!-- Intel(R) Parallel Studio XE Composer Edition for Linux* -->
 	<package>intel-gdb-INTEL_MINOR</package>
@@ -104,9 +103,6 @@
 	<package>intel-tbb-devel-INTEL_MINOR</package>
 
 <post>
-if [ -x /opt/intel/rocks/bin/addModPath ] ; then
-   /opt/intel/rocks/bin/addModPath
-fi 
 </post>
 
 </kickstart>
