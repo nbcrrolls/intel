@@ -69,7 +69,7 @@ module files in: ::
     /opt/modulefiles/compilers/intel
     /opt/modulefiles/applications/mkl
 
-If a clsuter has no login node, to intall compilers on the frontend execute the following 
+If a cluster has no login node, to install compilers on the frontend execute the following 
 command before running ``rocks add roll``: ::
     
     # /opt/rocks/bin/rocks add host attr localhost intelxe true
