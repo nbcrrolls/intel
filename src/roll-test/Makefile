@@ -2,22 +2,11 @@ REDHAT.ROOT = $(CURDIR)/../../
 
 -include $(ROCKSROOT)/etc/Rules.mk
 include Rules.mk
+include $(NBCRDEVEL)/NBCR.mk
 
 build:
 
-typical-roll-test-install:
-	mkdir -p -m 755 $(ROOT)/$(PKGROOT)
-	cp *.t $(ROOT)/$(PKGROOT)/
-	perl -pi -e 's#COMPILERNAME#$(COMPILERNAME)#g;' \
-	         -e 's#MPINAME#$(MPINAME)#g;' \
-	         -e 's#ROLLCOMPILER#$(ROLLCOMPILER)#g;' \
-	         -e 's#ROLLMPI#$(ROLLMPI)#g;' \
-	         -e 's#ROLLOPTS#$(ROLLOPTS)#g;' \
-	         -e 's#ROLLPY#$(ROLLPY)#g;' \
-	         -e 's#VERSION#$(VERSION)#g;' \
-	  $(ROOT)/$(PKGROOT)/*.t
-
-install:: typical-roll-test-install
+install:: roll-test-install
 	-mv $(ROOT)/$(PKGROOT)/*.t $(ROOT)/$(PKGROOT)/$(ROLLNAME).t
 
 clean::
