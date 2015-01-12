@@ -58,7 +58,7 @@
 REDHAT.ROOT = $(CURDIR)/../../
 
 -include $(ROCKSROOT)/etc/Rules.mk
-include $(REDHAT.ROOT)/src/Pull.mk
+include $(NBCRDEVEL)/NBCR.mk
 
 version.mk: version.mk.in
 	cat ../version.mk version.mk.in > version.mk
