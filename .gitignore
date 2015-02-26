@@ -4,21 +4,26 @@ RPMS/noarch
 SOURCES/
 BUILD/
 SPECS/
-disk1/
+disk?/
 *.iso
 
 _os
 _arch
 _distribution
 .rpmmacros
+python.mk
 
 # ignore version, rules  files
 Rules-*.mk
 Rules.mk
 Rolls.mk
-roll*.mk
+roll-*.*
 rocks-*.mk
 
 # ignore src files
 src/*/*.tar.gz
 src/*/*.tgz
+
+# ignore created files
+version.mk
+nodes/intel-server.xml
