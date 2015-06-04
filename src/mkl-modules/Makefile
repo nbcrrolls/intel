@@ -16,6 +16,7 @@ $(VERSION.MK.INCLUDE):
 build:
 
 install:: modulefile-install
+	sed -i 's/INTELVERS/$(INTELVERS)/g' $(ROOT)/$(PKGROOT)/$(VERSION)
 
 clean::
 	rm -rf $(VERSION.MK.INCLUDE)
