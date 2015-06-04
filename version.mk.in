@@ -1,5 +1,6 @@
 ROLLNAME    = intel
 RELEASE     = 0
 COLOR	    = orange
+ISOSIZE     = 1000
 
 REDHAT.ROOT = $(CURDIR)
