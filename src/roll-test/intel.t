@@ -10,7 +10,7 @@ my $appliance = $#ARGV >= 0 ? $ARGV[0] :
                 -d '/export/rocks/install' ? 'Frontend' : 'Compute';
 my $installedOnAppliancesPattern = '^(?!Frontend).';
 my $isInstalled = -d '/opt/intel';
-my $compilersInstalled = "ROLLNAME" eq "intel";
+my $compilersInstalled = 1;
 my $output;
 
 my $TESTFILE = 'tmpintel';
