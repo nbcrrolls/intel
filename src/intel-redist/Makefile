@@ -63,6 +63,9 @@ include $(NBCRDEVEL)/NBCR.mk
 version.mk: version.mk.in
 	cat ../version.mk version.mk.in > version.mk
 
+%: %.in
+	$(SED) $(SEDSCRIPT) $(ADDSED) $^ > $@
+
 build: $(SRC_DIRS)
 	cd patch-files && find . -type f | grep -v CVS | cpio -pduv ../
 
@@ -70,6 +73,8 @@ install::
 	mkdir -p $(ROOT)/$(PKGROOT)
 	( cd $(FCOMP_DIR); ./install.sh -e -i $(ROOT)/$(PKGROOT) )
 	( cd $(CCOMP_DIR); ./install.sh -e -i $(ROOT)/$(PKGROOT) )
+	mkdir -p $(ROOT)/$(PKGROOT)/rocks
+	$(INSTALL) -m0755 add-redist-link $(ROOT)/$(PKGROOT)/rocks
 
 clean::
 	rm -rf version.mk

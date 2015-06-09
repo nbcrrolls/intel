@@ -19,6 +19,7 @@
 	<package>mkl-modules</package>
 
 <post>
+/opt/intel/rocks/add-redist-link
 </post>
 
 </kickstart>
