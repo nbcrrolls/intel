@@ -73,6 +73,12 @@ command before running ``rocks add roll``: ::
     
     # /opt/rocks/bin/rocks add host attr localhost intelxe true
 
+On a login node (or forntend if there is no login node) install licenses: ::
+    
+    # yum clean all; yum install intel-licenses 
+    
+and add purchased licenses files in created /opt/intel/licenses/
+
 Testing
 ----------
 
