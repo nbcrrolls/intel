@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# check if we have intel-redist installed
+if [ ! -d /opt/intel/compiler ]; then
+    echo "intel-redist is not installed"
+    exit
+fi
+
+# create a link if not exist
+linkName=composer_xe_2015.3.187
+cd /opt/intel
+if [ ! -L $linkName ]; then
+    ln -s . $linkName
+fi
